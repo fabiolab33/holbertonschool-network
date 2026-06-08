@@ -1,0 +1,95 @@
+# What happens when you type https://www.google.com in your browser and press Enter
+
+When you type a URL like https://www.google.com into your browser and press Enter, a complex process begins behind the scenes involving multiple layers of the internet infrastructure. This process happens in milliseconds, but it involves several important components such as DNS, TCP/IP, firewalls, HTTPS, load balancers, web servers, application servers, and databases.
+
+---
+
+## 1. DNS Request
+
+The first step is the DNS (Domain Name System) lookup. The browser checks if it already knows the IP address of www.google.com. If not, it sends a request to a DNS server to translate the domain name into an IP address.
+
+This is similar to looking up a phone number in a contact list.
+
+---
+
+## 2. TCP/IP Connection
+
+Once the IP address is known, the browser establishes a connection using the TCP/IP protocol. This ensures a reliable connection between the client (your computer) and the server.
+
+A TCP handshake occurs:
+- SYN
+- SYN-ACK
+- ACK
+
+This confirms both sides are ready to communicate.
+
+---
+
+## 3. Firewall
+
+Before reaching the destination server, the request may pass through firewalls. Firewalls are security systems that monitor and control incoming and outgoing network traffic based on security rules.
+
+They ensure that only safe and authorized traffic is allowed.
+
+---
+
+## 4. HTTPS / SSL Encryption
+
+Since the URL uses HTTPS, the communication is secured using SSL/TLS encryption.
+
+This process:
+- Verifies the server identity using certificates
+- Encrypts data so it cannot be intercepted or read by attackers
+
+---
+
+## 5. Load Balancer
+
+Large services like Google use load balancers to distribute traffic across multiple servers.
+
+The load balancer:
+- Receives the request
+- Chooses the best available server
+- Sends the request to that server
+
+This improves performance and reliability.
+
+---
+
+## 6. Web Server
+
+The web server receives the HTTP request and processes it. It can:
+- Serve static content (HTML, images, etc.)
+- Forward dynamic requests to an application server
+
+---
+
+## 7. Application Server
+
+The application server handles the business logic. For example:
+- Processing user requests
+- Running backend code
+- Communicating with databases
+
+---
+
+## 8. Database
+
+If data is needed, the application server queries the database.
+
+The database stores and retrieves information such as user data, search history, and more.
+
+---
+
+## 9. Response Returned
+
+After processing, the response travels back through the same layers:
+database → application server → web server → load balancer → browser.
+
+Finally, the browser renders the page and you see the Google homepage.
+
+---
+
+## Conclusion
+
+Typing a URL into a browser triggers a complex chain of systems working together: DNS resolution, secure connection via HTTPS, traffic routing through load balancers, request handling by servers, and data retrieval from databases — all happening in milliseconds.
